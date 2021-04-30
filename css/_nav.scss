@@ -1,0 +1,64 @@
+@mixin nav-text($text-size, $bold) {
+    margin: 0.2vh 1vw;
+
+    font-size: $text-size;
+    text-decoration: none;
+
+    color: $font-color-white;
+
+    @if ($bold == true) {
+        font-weight: bold;
+    }
+}
+
+nav {
+    padding: 1.8vh;
+    position: fixed;
+    width: 100%;
+
+    background-color: $secondary-color;
+
+    border-bottom: 10px $main-color solid;
+}
+
+#nav-logo {
+    padding-left: 5px;
+    display: inline-block;
+
+    a {
+        @include nav-text(1.5rem, true);
+        padding-bottom: 3px;
+
+        &:hover {
+            border-bottom: 4px $main-color solid;
+        }
+    }
+}
+
+#nav-produtos-container {
+    display: inline-block;
+    a {
+        @include nav-text(1.3rem, false);
+    }
+}
+
+#nav-produtos-dropdown {
+    padding-top: 10px;
+    position: absolute;
+
+    background-color: $secondary-color;
+    border-top: 4px $main-color solid;
+    border-bottom: 9px $main-color solid;
+
+    ul {
+        list-style: none;
+
+        li {
+            padding: 5px;
+
+            a {
+                font-size: 1.15rem;
+            }
+        }
+    }
+}
