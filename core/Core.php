@@ -19,10 +19,13 @@ class Core
                         $action = 'list';
                         break;
                     case 'register':
+                        $action = 'register';
                         break;
                     case 'update':
+                        $action = 'update';
                         break;
                     case 'delete':
+                        $action = 'delete';
                         break;
                     default:
                         $controller = 'ErrorController';
@@ -32,7 +35,7 @@ class Core
             $controller = 'HomeController';
         }
 
-        //caso o controller fornecido nao existe, direcionar o usuario para a pagina de erro
+        //caso o controller fornecido nao exista, direcionar o usuario para a pagina de erro
         if (!class_exists($controller)) {
             $controller = 'ErrorController';
         }

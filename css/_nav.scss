@@ -39,6 +39,7 @@ nav {
     display: inline-block;
     a {
         @include nav-text(1.3rem, false);
+        cursor: pointer;
     }
 }
 

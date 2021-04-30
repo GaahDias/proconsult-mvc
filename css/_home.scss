@@ -1,0 +1,36 @@
+#titulo {
+    text-align: center;
+    margin-bottom: 30px;
+
+    background: rgb(230, 96, 44);
+    background: linear-gradient(90deg, rgba(230, 96, 44, 1) 0%, rgba(254, 130, 33, 1) 50%, rgba(227, 71, 36, 1) 100%);
+    border-radius: 0px 0px 37px 36px;
+
+    padding: 5vh 0vw;
+
+    h2 {
+        font-size: 1.8rem;
+        color: $font-color-white;
+        font-weight: bold;
+
+        padding: 7px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: $font-color-white;
+
+        padding: 7px;
+    }
+}
+
+#carrossel {
+    display: inline-block;
+    text-align: center;
+
+    img {
+        width: 60%;
+        max-height: 50vh;
+        border-radius: 25px;
+    }
+}

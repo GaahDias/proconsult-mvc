@@ -22,15 +22,21 @@ class ProductController
     //Cdastrar
     public function register()
     {
+        $content = file_get_contents('./view/register.html');
+        echo $content;
     }
 
     //Atualizar
     public function update()
     {
+        $content = file_get_contents('./view/update.html');
+        echo $content;
     }
 
     //Deletar
     public function delete()
     {
+        $content = file_get_contents('./view/delete.html');
+        echo $content;
     }
 }

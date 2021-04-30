@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #dbdbdb;
+  background-color: #dadada;
   font-family: Arial;
   width: 100%;
   height: 100vh;
@@ -17,7 +17,7 @@ body {
 }
 
 main {
-  padding-top: 10vh;
+  padding-top: 7.5vh;
 }
 
 nav {
@@ -25,7 +25,7 @@ nav {
   position: fixed;
   width: 100%;
   background-color: #e6602c;
-  border-bottom: 10px #d1503f solid;
+  border-bottom: 10px #cf402d solid;
 }
 
 #nav-logo {
@@ -43,7 +43,7 @@ nav {
 }
 
 #nav-logo a:hover {
-  border-bottom: 4px #d1503f solid;
+  border-bottom: 4px #cf402d solid;
 }
 
 #nav-produtos-container {
@@ -55,14 +55,15 @@ nav {
   font-size: 1.3rem;
   text-decoration: none;
   color: #fafafa;
+  cursor: pointer;
 }
 
 #nav-produtos-dropdown {
   padding-top: 10px;
   position: absolute;
   background-color: #e6602c;
-  border-top: 4px #d1503f solid;
-  border-bottom: 9px #d1503f solid;
+  border-top: 4px #cf402d solid;
+  border-bottom: 9px #cf402d solid;
 }
 
 #nav-produtos-dropdown ul {
@@ -82,9 +83,43 @@ nav {
   bottom: 0;
   width: 100%;
   height: 25px;
-  background-color: #d1503f;
+  background-color: #cf402d;
   color: #fafafa;
   text-align: center;
   font-size: 1.1rem;
+}
+
+#titulo {
+  text-align: center;
+  margin-bottom: 30px;
+  background: #e6602c;
+  background: -webkit-gradient(linear, left top, right top, from(#e6602c), color-stop(50%, #fe8221), to(#e34724));
+  background: linear-gradient(90deg, #e6602c 0%, #fe8221 50%, #e34724 100%);
+  border-radius: 0px 0px 37px 36px;
+  padding: 5vh 0vw;
+}
+
+#titulo h2 {
+  font-size: 1.8rem;
+  color: #fafafa;
+  font-weight: bold;
+  padding: 7px;
+}
+
+#titulo p {
+  font-size: 1.2rem;
+  color: #fafafa;
+  padding: 7px;
+}
+
+#carrossel {
+  display: inline-block;
+  text-align: center;
+}
+
+#carrossel img {
+  width: 60%;
+  max-height: 50vh;
+  border-radius: 25px;
 }
 /*# sourceMappingURL=main.css.map */

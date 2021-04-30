@@ -18,7 +18,7 @@ abstract class Connection
             }
 
             return self::$con;
-        } catch (Exception $e) {
+        } catch (Exception $e) { //mensagem de erro caso a conexao falhe
             echo '<h2>Erro ao se conectar com o banco de dados.</h2> <br>';
             echo 'ERROR MESSAGE: ' . $e;
         }
