@@ -1,12 +1,6 @@
 <?php
 //importando arquivos
-require_once('core/Core.php');
-
-require_once('lib/Database/Connection.php');
-
-require_once('controller/HomeController.php');
-require_once('controller/ErrorController.php');
-require_once('controller/ListController.php');
+include('./autoload.php');
 
 require_once('model/Product.php');
 

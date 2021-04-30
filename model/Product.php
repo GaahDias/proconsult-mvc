@@ -10,9 +10,15 @@ class Product
         $query = $con->prepare($query);
         $query->execute();
 
-        $res = $query->fetch(PDO::FETCH_ASSOC);
+        $id = 0;
 
-        if(!$res) {
+        while ($x = $query->fetch(PDO::FETCH_ASSOC)) {
+            $res[$id] = $x;
+
+            $id++;
+        }
+
+        if (!$res) {
             throw new Exception('Nenhum registro no banco encontrado.');
         }
 
