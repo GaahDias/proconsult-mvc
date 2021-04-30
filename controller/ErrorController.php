@@ -1,5 +1,9 @@
 <?php
 
-class ErrorController {
-    
+class ErrorController
+{
+    public function index()
+    {
+        echo 'Erro';
+    }
 }
