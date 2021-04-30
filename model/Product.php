@@ -10,10 +10,10 @@ class Product
         $query = $con->prepare($query);
         $query->execute();
 
-        $res = [];
+        $res = $query->fetch(PDO::FETCH_ASSOC);
 
-        while ($row = $query->fetchObject('Product')) {
-            $res[] = $row;
+        if(!$res) {
+            throw new Exception('Nenhum registro no banco encontrado.');
         }
 
         return $res;

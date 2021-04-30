@@ -1,11 +1,9 @@
 <?php
-
 class HomeController
 {
     public function index()
     {
-        $prods = Product::select();
-
-        var_dump($prods);
+        $content = file_get_contents('./view/home.html');
+        echo $content;
     }
 }

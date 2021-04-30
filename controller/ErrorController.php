@@ -4,6 +4,7 @@ class ErrorController
 {
     public function index()
     {
-        echo 'Erro';
+        $content = file_get_contents('./view/error.html');
+        echo $content;
     }
 }

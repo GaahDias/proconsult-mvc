@@ -1,14 +1,13 @@
 <?php
-//chamando o Core
+//importando arquivos
 require_once('core/Core.php');
 
 require_once('lib/Database/Connection.php');
 
-//chamando os Controllers
 require_once('controller/HomeController.php');
 require_once('controller/ErrorController.php');
+require_once('controller/ListController.php');
 
-//chamando as Models
 require_once('model/Product.php');
 
 //pegando o template
