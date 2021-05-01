@@ -23,7 +23,11 @@ class ProductController
     public function register()
     {
         if ($_POST != null) {
-            Product::insert($_POST['txtName'], $_POST['fileImage'], $_POST['nmbPrice']);
+            if (!empty($_POST['txtName']) && !empty($_POST['fileImage']) && !empty($_POST['nmbPrice'])) {
+                Product::insert($_POST['txtName'], $_POST['fileImage'], $_POST['nmbPrice']);
+            } else {
+                echo "<script>const messageFlag = true; let message = 'register';</script>";
+            }
         }
 
         $content = file_get_contents('./view/register.html');

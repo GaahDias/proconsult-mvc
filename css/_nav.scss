@@ -47,6 +47,10 @@ nav {
     padding-top: 10px;
     position: absolute;
 
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    display: none;
+
     background-color: $secondary-color;
     border-top: 4px $main-color solid;
     border-bottom: 9px $main-color solid;

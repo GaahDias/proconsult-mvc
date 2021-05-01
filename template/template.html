@@ -8,6 +8,11 @@
     <title>MVC com PHP</title>
 
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- <script>
+        const divMessage = document.getElementById('div-mensagem-erro');
+        const textMessage = document.getElementById('p-mensagem-erro');
+    </script> -->
 </head>
 
 <body>
@@ -20,7 +25,7 @@
         <!-- Produtos -->
         <div id="nav-produtos-container">
             <a id="nav-produtos">Produtos</a>
-            <div id="nav-produtos-dropdown" class="hidden">
+            <div id="nav-produtos-dropdown">
                 <ul>
                     <li><a href="?page=prod&action=list">Listar</a></li>
                     <li><a href="?page=prod&action=register">Cadastrar</a></li>
@@ -31,6 +36,10 @@
         </div>
     </nav>
 
+    <div id="div-mensagem-erro">
+        <p id="p-mensagem-erro">Erro</p>
+    </div>
+
     <main>
         {{content}}
     </main>
@@ -38,7 +47,6 @@
     <footer id="footer">
         <p>Proconsult - 2021</p>
     </footer>
-
     <script src="./js/script.js"></script>
 </body>
 

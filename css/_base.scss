@@ -24,10 +24,36 @@ body {
     min-height: 100vh;
 }
 
-.hidden {
-    display: none;
-}
-
 main {
     padding-top: 7.5vh;
+}
+
+#div-mensagem-erro {
+    background-color: $bg-orange-color;
+
+    position: absolute;
+    margin-right: 20px;
+    margin-top: 70vh;
+    padding: 15px;
+
+    bottom: 8vh;
+    left: 83vw;
+
+    text-align: center;
+    border-radius: 10px;
+
+    opacity: 0;
+    transition: opacity 600ms ease-in-out;
+
+    p {
+        margin-top: 2vh;
+
+        font-size: 1.1rem;
+        color: $font-color-white;
+        font-style: italic;
+    }
+}
+
+#nav-produtos-dropdown.fade, #div-mensagem-erro.fade {
+    opacity: 1;
 }

@@ -12,12 +12,34 @@ body {
   min-height: 100vh;
 }
 
-.hidden {
-  display: none;
-}
-
 main {
   padding-top: 7.5vh;
+}
+
+#div-mensagem-erro {
+  background-color: #e6602c;
+  position: absolute;
+  margin-right: 20px;
+  margin-top: 70vh;
+  padding: 15px;
+  bottom: 8vh;
+  left: 83vw;
+  text-align: center;
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 600ms ease-in-out;
+  transition: opacity 600ms ease-in-out;
+}
+
+#div-mensagem-erro p {
+  margin-top: 2vh;
+  font-size: 1.1rem;
+  color: #fafafa;
+  font-style: italic;
+}
+
+#nav-produtos-dropdown.fade, #div-mensagem-erro.fade {
+  opacity: 1;
 }
 
 nav {
@@ -61,6 +83,10 @@ nav {
 #nav-produtos-dropdown {
   padding-top: 10px;
   position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+  display: none;
   background-color: #e6602c;
   border-top: 4px #cf402d solid;
   border-bottom: 9px #cf402d solid;
