@@ -2,6 +2,7 @@
 
 class Product
 {
+    //SELECT
     public static function select()
     {
         $con = Connection::getCon();
@@ -10,12 +11,13 @@ class Product
         $query = $con->prepare($query);
         $query->execute();
 
-        $id = 0;
+        //variavel para incrementar o index da array
+        $index = 0;
 
         while ($x = $query->fetch(PDO::FETCH_ASSOC)) {
-            $res[$id] = $x;
+            $res[$index] = $x;
 
-            $id++;
+            $index++;
         }
 
         if (!$res) {
@@ -23,5 +25,31 @@ class Product
         }
 
         return $res;
+    }
+
+    //INSERT
+    public static function insert($name, $image, $price)
+    {
+        // $name = $_POST['txtName'];
+        // $image = $_POST['fileImage'];
+        // $price = $_POST['nmbPrice'];
+
+        $con = Connection::getCon();
+
+        $query = "INSERT INTO tb_product VALUE (DEFAULT, {$name}, {$image}, ${price})";
+        $query = $con->prepare($query);
+        $query->execute();
+    }
+
+    //UPDATE
+    public static function update()
+    {
+        $con = Connection::getCon();
+    }
+
+    //DELETE
+    public static function delete()
+    {
+        $con = Connection::getCon();
     }
 }
