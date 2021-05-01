@@ -1,24 +1,26 @@
-<div id="titulo-cadastrar">
-    <h2>Cadastro de produtos</h2>
-</div>
+<div id="container-cadastrar">
+    <div id="titulo-cadastrar">
+        <h2>Cadastro de produtos</h2>
+    </div>
 
-<div id="conteudo-cadastrar">
-    <form method="post" action="./model/Product.php">
-        <fieldset>
-            <label>Nome:</label> <br>
-            <input type="text" name="txtName">
-        </fieldset>
+    <div>
+        <form method="post" action="?page=prod&action=register">
+            <fieldset class="field-cadastrar">
+                <label>Nome:</label> <br>
+                <input type="text" name="txtName">
+            </fieldset>
 
-        <fieldset>
-            <label>Preço:</label> <br>
-            <input type="number" name="nmbPrice">
-        </fieldset>
+            <fieldset class="field-cadastrar">
+                <label>Preço:</label> <br>
+                <input type="number" name="nmbPrice">
+            </fieldset>
 
-        <fieldset>
-            <label>Imagem:</label> <br>
-            <input type="file" name="fileImage">
-        </fieldset>
+            <fieldset class="field-cadastrar">
+                <label>Imagem:</label> <br>
+                <input type="file" name="fileImage" id="img-cadastrar">
+            </fieldset>
 
-        <button type="submit" id="btn-cadastrar">Cadastrar</button>
-    </form>
+            <button type="submit" id="btn-cadastrar">Cadastrar</button>
+        </form>
+    </div>
 </div>

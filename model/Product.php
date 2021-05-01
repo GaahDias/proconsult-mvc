@@ -30,13 +30,9 @@ class Product
     //INSERT
     public static function insert($name, $image, $price)
     {
-        // $name = $_POST['txtName'];
-        // $image = $_POST['fileImage'];
-        // $price = $_POST['nmbPrice'];
-
         $con = Connection::getCon();
 
-        $query = "INSERT INTO tb_product VALUE (DEFAULT, {$name}, {$image}, ${price})";
+        $query = "INSERT INTO tb_product VALUE (DEFAULT, '{$name}', '{$image}', {$price})";
         $query = $con->prepare($query);
         $query->execute();
     }

@@ -1,10 +1,19 @@
+@mixin background-gradient() {
+    background: $bg-orange-color;
+    background: linear-gradient(90deg, rgba(230, 96, 44, 1) 0%, rgba(254, 130, 33, 1) 50%, rgba(227, 71, 36, 1) 100%);
+}
+
+@mixin background-border-radius($value) {
+    border-radius: 0px 0px $value $value;
+}
+
 * {
     padding: 0px;
     margin: 0px;
 }
 
 body {
-    background-color: $bg-color;
+    background-color: $bg-white-color;
 
     font-family: Arial;
 

@@ -22,6 +22,10 @@ class ProductController
     //Cdastrar
     public function register()
     {
+        if ($_POST != null) {
+            Product::insert($_POST['txtName'], $_POST['fileImage'], $_POST['nmbPrice']);
+        }
+
         $content = file_get_contents('./view/register.html');
         echo $content;
     }
