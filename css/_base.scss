@@ -1,6 +1,13 @@
-@mixin background-gradient() {
+@mixin background-gradient($color) {
     background: $bg-orange-color;
-    background: linear-gradient(90deg, rgba(230, 96, 44, 1) 0%, rgba(254, 130, 33, 1) 50%, rgba(227, 71, 36, 1) 100%);
+    @if $color == "orange" {
+        background: linear-gradient(
+            90deg,
+            rgba(230, 96, 44, 1) 0%,
+            rgba(254, 130, 33, 1) 50%,
+            rgba(227, 71, 36, 1) 100%
+        );
+    }
 }
 
 @mixin background-border-radius($value) {
@@ -13,7 +20,7 @@
 }
 
 body {
-    background-color: $bg-white-color;
+    background-color: $bg-color;
 
     font-family: Arial;
 
@@ -54,6 +61,7 @@ main {
     }
 }
 
-#nav-produtos-dropdown.fade, #div-mensagem-erro.fade {
+#nav-produtos-dropdown.fade,
+#div-mensagem-erro.fade {
     opacity: 1;
 }

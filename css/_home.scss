@@ -2,7 +2,7 @@
     text-align: center;
     margin-bottom: 30px;
 
-    @include background-gradient;
+    @include background-gradient("orange");
     @include background-border-radius(37px);
 
     padding: 5vh 0vw;
@@ -23,13 +23,74 @@
     }
 }
 
-#carrossel {
-    display: inline-block;
+#div-quemsomos {
+    @include background-gradient("orange");
+}
+
+#titulo-quemsomos {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 75%;
+
+    h2 {
+        padding: 15px;
+        text-align: center;
+        font-size: 1.7rem;
+        color: $font-color-white;
+    }
+
+    p {
+        color: $font-color-white;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+#imgs-quemsomos {
+    padding: 4vh 0vw 5vh 0vw;
     text-align: center;
+}
+
+.foto-quemsomos {
+    display: inline-block;
+    max-width: 30vw;
 
     img {
-        width: 60%;
-        max-height: 50vh;
-        border-radius: 25px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+
+        padding-bottom: 2vh;
+        padding-top: 0.5vh;
+
+        max-width: 250px;
+        max-height: 238px;
     }
+
+    h4 {
+        text-align: center;
+        color: $font-color-white;
+        font-size: 1.1rem;
+    }
+    p {
+        text-align: center;
+        color: $font-color-white;
+        font-size: 1.05rem;
+    }
+}
+
+#foto-meio-quemsomos {
+    padding: 0vh 3.5vw 0vh 3.5vw;
+}
+
+hr {
+    background-color: $main-color;
+
+    border-radius: 100px;
+
+    margin: 10px 2vw 10px 2vw;
+    height: 7px;
 }

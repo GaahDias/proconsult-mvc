@@ -1,5 +1,5 @@
 #container-cadastrar {
-    @include background-gradient;
+    @include background-gradient("orange");
     @include background-border-radius(30px);
 
     text-align: center;
@@ -50,7 +50,7 @@
 
     background-color: $bg-orange-color;
 
-    border: 4px $bg-white-color solid;
+    border: 4px $bg-color solid;
     border-radius: 20px;
 
     &:hover {

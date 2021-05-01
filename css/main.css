@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #dadada;
+  background-color: #dbdbdb;
   font-family: Arial;
   width: 100%;
   height: 100vh;
@@ -38,7 +38,8 @@ main {
   font-style: italic;
 }
 
-#nav-produtos-dropdown.fade, #div-mensagem-erro.fade {
+#nav-produtos-dropdown.fade,
+#div-mensagem-erro.fade {
   opacity: 1;
 }
 
@@ -138,15 +139,73 @@ nav {
   padding: 7px;
 }
 
-#carrossel {
-  display: inline-block;
+#div-quemsomos {
+  background: #e6602c;
+  background: -webkit-gradient(linear, left top, right top, from(#e6602c), color-stop(50%, #fe8221), to(#e34724));
+  background: linear-gradient(90deg, #e6602c 0%, #fe8221 50%, #e34724 100%);
+}
+
+#titulo-quemsomos {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+#titulo-quemsomos h2 {
+  padding: 15px;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #fafafa;
+}
+
+#titulo-quemsomos p {
+  color: #fafafa;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#imgs-quemsomos {
+  padding: 4vh 0vw 5vh 0vw;
   text-align: center;
 }
 
-#carrossel img {
-  width: 60%;
-  max-height: 50vh;
-  border-radius: 25px;
+.foto-quemsomos {
+  display: inline-block;
+  max-width: 30vw;
+}
+
+.foto-quemsomos img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 2vh;
+  padding-top: 0.5vh;
+  max-width: 250px;
+  max-height: 238px;
+}
+
+.foto-quemsomos h4 {
+  text-align: center;
+  color: #fafafa;
+  font-size: 1.1rem;
+}
+
+.foto-quemsomos p {
+  text-align: center;
+  color: #fafafa;
+  font-size: 1.05rem;
+}
+
+#foto-meio-quemsomos {
+  padding: 0vh 3.5vw 0vh 3.5vw;
+}
+
+hr {
+  background-color: #cf402d;
+  border-radius: 100px;
+  margin: 10px 2vw 10px 2vw;
+  height: 7px;
 }
 
 #container-cadastrar {
@@ -196,7 +255,7 @@ nav {
   font-size: 1.1rem;
   color: #fafafa;
   background-color: #e6602c;
-  border: 4px #dadada solid;
+  border: 4px #dbdbdb solid;
   border-radius: 20px;
 }
 
