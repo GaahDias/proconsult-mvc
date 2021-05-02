@@ -29,8 +29,23 @@ if (typeof messageFlag != 'undefined') {
     divMessage.classList.toggle('fade');
 
     switch (message) {
-        case 'register':
+        case 'registerSuccess':
+            message = 'Produto cadastrado com sucesso!';
+            break;
+        case 'registerFail':
             message = 'Por favor, preencha todos os campos antes de cadastrar um produto.';
+            break;
+        case 'deleteSuccess':
+            message = 'Produto deletado com sucesso!';
+            break;
+        case 'deleteFail':
+            message = 'Algo deu errado... O produto não pode ser deletado.'
+            break;
+        case 'updateSuccess':
+            message = 'Produto atualizado com sucesso!';
+            break;
+        case 'updateFail':
+            message = 'Não foi possível atualizar o Produto.';
             break;
         default:
             message = 'Erro desconhecido...';

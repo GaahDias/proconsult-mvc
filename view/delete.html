@@ -1,0 +1,14 @@
+<div class="container-prods">
+    <div class="titulo-prods">
+        <h2>Exclusão de Produtos</h2>
+    </div>
+    <form method="post" action="?page=prod&action=delete">
+        <div>
+            <select name="optDelete">
+                <option value="">Selecione o produto</option>
+                {{options}}
+            </select>
+        </div>
+        <button type="submit" class="btn-prods">Deletar</button>
+    </form>
+</div>

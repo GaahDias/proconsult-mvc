@@ -1,0 +1,82 @@
+.container-prods {
+    @include background-gradient("orange");
+    @include background-border-radius(30px);
+
+    text-align: center;
+
+    padding: 7vh;
+}
+
+.titulo-prods {
+    font-size: 1.4rem;
+    color: $font-color-white;
+    margin-bottom: 2vh;
+}
+
+.btn-prods {
+    padding: 7px 35px 7px 35px;
+    margin-top: 3vh;
+
+    font-size: 1.1rem;
+    color: $font-color-white;
+
+    background-color: $bg-orange-color;
+
+    border: 4px $font-color-white solid;
+    border-radius: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.field-prods {
+    padding: 15px;
+    border: 0;
+
+    label {
+        color: $font-color-white;
+        font-size: 1.1rem;
+    }
+
+    input {
+        padding-top: 5px;
+
+        font-size: 1rem;
+
+        border: none;
+        border-radius: 7px;
+
+        &:focus {
+            background-color: #f1f1f1;
+            outline: none;
+        }
+    }
+}
+
+#listagem-prods {
+    padding-top: 3.5vh;
+
+    img {
+        padding: 20px;
+
+        width: 575px;
+        height: 450px;
+    }
+    h3 {
+        font-size: 1.5rem;
+        color: $font-color-black;
+
+        padding-bottom: 5px;
+    }
+    p {
+        font-size: 1.1rem;
+        color: $font-color-black;
+
+        padding-bottom: 10px;
+    }
+}
+
+#img-cadastrar {
+    color: $font-color-white;
+}

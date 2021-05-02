@@ -1,0 +1,32 @@
+<div class="container-prods">
+    <div class="titulo-prods">
+        <h2>Atualização de Produtos</h2>
+    </div>
+
+    <form method="post" action="?page=prod&action=update">
+        <div>
+            <select name="optUpdate">
+                <option value="null">Selecione o produto</option>
+                {{options}}
+            </select>
+        </div>
+        <div>
+            <fieldset class="field-prods">
+                <label>Nome:</label> <br>
+                <input type="text" name="txtName">
+            </fieldset>
+
+            <fieldset class="field-prods">
+                <label>Preço:</label> <br>
+                <input type="number" name="nmbPrice">
+            </fieldset>
+
+            <fieldset class="field-prods">
+                <label>Imagem:</label> <br>
+                <input type="file" name="fileImage" id="img-cadastrar">
+            </fieldset>
+        </div>
+        <button type="submit" class="btn-prods">Atualizar</button>
+    </form>
+
+</div>

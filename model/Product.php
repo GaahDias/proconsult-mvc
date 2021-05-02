@@ -5,26 +5,27 @@ class Product
     //SELECT
     public static function select()
     {
-        $con = Connection::getCon();
+        try {
+            $con = Connection::getCon();
 
-        $query = "SELECT * FROM tb_product ORDER BY id_prod DESC";
-        $query = $con->prepare($query);
-        $query->execute();
+            $select = "SELECT * FROM tb_product ORDER BY id_prod DESC";
+            $select = $con->prepare($select);
+            $select->execute();
 
-        //variavel para incrementar o index da array
-        $index = 0;
+            $res = [];
+            //variavel para incrementar o index da array
+            $index = 0;
 
-        while ($x = $query->fetch(PDO::FETCH_ASSOC)) {
-            $res[$index] = $x;
+            while ($s = $select->fetch(PDO::FETCH_ASSOC)) {
+                $res[$index] = $s;
 
-            $index++;
+                $index++;
+            }
+
+            return $res;
+        } catch (Exception $e) {
+            echo 'Erro: ' . $e->getMessage();
         }
-
-        if (!$res) {
-            throw new Exception('Nenhum registro no banco encontrado.');
-        }
-
-        return $res;
     }
 
     //INSERT
@@ -32,20 +33,42 @@ class Product
     {
         $con = Connection::getCon();
 
-        $query = "INSERT INTO tb_product VALUE (DEFAULT, '{$name}', '{$image}', {$price})";
-        $query = $con->prepare($query);
-        $query->execute();
+        $insert = "INSERT INTO tb_product VALUE (DEFAULT, '{$name}', '{$image}', {$price})";
+        $insert = $con->prepare($insert);
+        $insert->execute();
     }
 
     //UPDATE
-    public static function update()
+    public static function update($id, $name, $image, $price)
     {
         $con = Connection::getCon();
+
+        if (!empty($id)) {
+            if ($name != '') {
+                $update = "UPDATE tb_product SET prod_name = '$name' WHERE id_prod = $id";
+                $update = $con->prepare($update);
+                $update->execute();
+            } else if ($image != '') {
+                $update = "UPDATE tb_product SET prod_image = '$image' WHERE id_prod = $id";
+                $update = $con->prepare($update);
+                $update->execute();
+            } else if ($price != '') {
+                $update = "UPDATE tb_product SET prod_price = $price WHERE id_prod = $id";
+                $update = $con->prepare($update);
+                $update->execute();
+            }
+        }
     }
 
     //DELETE
-    public static function delete()
+    public static function delete($id)
     {
         $con = Connection::getCon();
+
+        if (!empty($id)) {
+            $delete = "DELETE FROM tb_product WHERE id_prod = $id";
+            $delete = $con->prepare($delete);
+            $delete->execute();
+        }
     }
 }
