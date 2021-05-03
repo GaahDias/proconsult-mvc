@@ -143,6 +143,7 @@ nav {
   background: #e6602c;
   background: -webkit-gradient(linear, left top, right top, from(#e6602c), color-stop(50%, #fe8221), to(#e34724));
   background: linear-gradient(90deg, #e6602c 0%, #fe8221 50%, #e34724 100%);
+  border-radius: 20px;
 }
 
 #titulo-quemsomos {

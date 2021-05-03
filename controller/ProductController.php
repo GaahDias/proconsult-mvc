@@ -29,13 +29,17 @@ class ProductController
     public function register()
     {
         if ($_POST != null) {
-            if (!empty($_POST['txtName']) && !empty($_POST['fileImage']) && !empty($_POST['nmbPrice'])) {
-                Product::insert($_POST['txtName'], $_POST['fileImage'], $_POST['nmbPrice']);
+            if (!empty($_POST['txtName']) && !empty($_FILES['fileImage']) && !empty($_POST['nmbPrice'])) {
+                Product::insert($_POST['txtName'], $_FILES['fileImage']['name'], $_POST['nmbPrice']);
+                Image::save($_FILES['fileImage']);
+
                 echo "<script>const messageFlag = true; let message = 'registerSuccess';</script>";
             } else {
                 echo "<script>const messageFlag = true; let message = 'registerFail';</script>";
             }
         }
+
+
 
         $content = file_get_contents('./view/register.html');
         echo $content;
@@ -57,8 +61,12 @@ class ProductController
         echo $content;
 
         if ($_POST != null) {
-            if (!empty($_POST['optUpdate']) && !empty($_POST['txtName']) || !empty($_POST['fileImage']) || !empty($_POST['nmbPrice'])) {
-                Product::update($_POST['optUpdate'], $_POST['txtName'], $_POST['fileImage'], $_POST['nmbPrice']);
+            if (!empty($_POST['optUpdate']) && !empty($_POST['txtName']) || !empty($_FILES['fileImage']) || !empty($_POST['nmbPrice'])) {
+                if ($_FILES['fileImage']['size'] > 0) {
+                    Image::update($_POST['optUpdate'], $_FILES['fileImage']);
+                }
+
+                Product::update($_POST['optUpdate'], $_POST['txtName'], $_FILES['fileImage']['name'], $_POST['nmbPrice']);
                 echo "<script>const messageFlag = true; let message = 'updateSuccess';</script>";
             } else {
                 echo "<script>const messageFlag = true; let message = 'updateFail';</script>";
@@ -71,7 +79,10 @@ class ProductController
     {
         if ($_POST != null) {
             if (!empty($_POST['optDelete'])) {
+                Image::delete($_POST['optDelete']);
+
                 Product::delete($_POST['optDelete']);
+
                 echo "<script>const messageFlag = true; let message = 'deleteSuccess';</script>";
             } else {
                 echo "<script>const messageFlag = true; let message = 'deleteFail';</script>";

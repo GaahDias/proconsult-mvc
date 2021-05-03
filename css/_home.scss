@@ -25,6 +25,7 @@
 
 #div-quemsomos {
     @include background-gradient("orange");
+    border-radius: 20px;
 }
 
 #titulo-quemsomos {

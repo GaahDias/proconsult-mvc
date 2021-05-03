@@ -14,4 +14,5 @@ spl_autoload_register(function ($class) {
     }
 
     require_once('lib/Database/Connection.php');
+    require_once('lib/Util/Image.php');
 });

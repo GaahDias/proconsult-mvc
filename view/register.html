@@ -4,7 +4,7 @@
     </div>
 
     <div>
-        <form method="post" action="?page=prod&action=register">
+        <form method="post" action="?page=prod&action=register" enctype="multipart/form-data">
             <fieldset class="field-prods">
                 <label>Nome:</label> <br>
                 <input type="text" name="txtName">
@@ -17,7 +17,7 @@
 
             <fieldset class="field-prods">
                 <label>Imagem:</label> <br>
-                <input type="file" name="fileImage" id="img-cadastrar">
+                <input type="file" name="fileImage">
             </fieldset>
 
             <button type="submit" class="btn-prods">Cadastrar</button>

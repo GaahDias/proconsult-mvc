@@ -71,4 +71,17 @@ class Product
             $delete->execute();
         }
     }
+
+    public static function selectWhere($id)
+    {
+        $con = Connection::getCon();
+
+        $select = "SELECT * FROM tb_product WHERE id_prod = $id";
+        $select = $con->prepare($select);
+        $select->execute();
+
+        $res = $select->fetch(PDO::FETCH_ASSOC);
+
+        return $res;
+    }
 }
