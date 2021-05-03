@@ -8,6 +8,7 @@
 * CRUD
 * MySQL
 * Javascript
+* Sass
 
 #### Prints (03/05)
 ![proconsult2](https://user-images.githubusercontent.com/36492293/116894626-aa313700-ac08-11eb-9448-dbd8bf9f764d.jpg)
