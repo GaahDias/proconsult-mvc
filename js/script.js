@@ -1,12 +1,13 @@
 'use strict';
-
+////////////////////////////////////////////////////////
 //pegando elementos da pagina
 const prodDropdown = document.getElementById('nav-produtos-dropdown');
 const prodLabel = document.getElementById('nav-produtos-container');
 
-const divMessage = document.getElementById('div-mensagem-erro');
-const textMessage = document.getElementById('p-mensagem-erro');
+const divMessage = document.getElementById('div-mensagem');
+const textMessage = document.getElementById('p-mensagem');
 
+////////////////////////////////////////////////////////
 //menu dropdown
 prodLabel.addEventListener('mouseover', () => {
     prodDropdown.classList.toggle('fade');
@@ -24,10 +25,11 @@ prodLabel.addEventListener('mouseout', () => {
     }, 150);
 })
 
-//mensagem de erro
+////////////////////////////////////////////////////////
+//mensagem
 if (typeof messageFlag != 'undefined') {
-    divMessage.classList.toggle('fade');
 
+    //passando mensagem de acordo com a variavel message, que é passada no controller
     switch (message) {
         case 'registerSuccess':
             message = 'Produto cadastrado com sucesso!';
@@ -50,8 +52,10 @@ if (typeof messageFlag != 'undefined') {
         default:
             message = 'Erro desconhecido...';
     }
-
     textMessage.textContent = message;
+
+    //fazendo efeito de fade in and out
+    divMessage.classList.toggle('fade');
 
     setTimeout(function () {
         divMessage.classList.toggle('fade');

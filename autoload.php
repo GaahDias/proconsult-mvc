@@ -1,5 +1,6 @@
 <?php
 
+//autoload de classes
 spl_autoload_register(function ($class) {
     $dirs = [
         'controller',

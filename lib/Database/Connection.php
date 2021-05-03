@@ -1,12 +1,15 @@
 <?php
 
+//classe de conexão com o banco
 abstract class Connection
 {
+    //variaveis com as infos do db
     const HOST = 'localhost';
     const NAME = 'db_proconsult';
     const USER = 'root';
     const PASSWORD = 'root';
 
+    //variavel de conexao
     private static $con;
 
     public static function getCon()

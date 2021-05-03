@@ -35,7 +35,7 @@ main {
     padding-top: 7.5vh;
 }
 
-#div-mensagem-erro {
+#div-mensagem {
     background-color: $bg-orange-color;
 
     position: absolute;
@@ -62,6 +62,6 @@ main {
 }
 
 #nav-produtos-dropdown.fade,
-#div-mensagem-erro.fade {
+#div-mensagem.fade {
     opacity: 1;
 }

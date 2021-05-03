@@ -2,8 +2,6 @@
 //importando arquivos
 include('./autoload.php');
 
-require_once('model/Product.php');
-
 //pegando o template
 $tempTemplate = file_get_contents('./template/template.html');
 

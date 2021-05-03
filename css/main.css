@@ -16,7 +16,7 @@ main {
   padding-top: 7.5vh;
 }
 
-#div-mensagem-erro {
+#div-mensagem {
   background-color: #e6602c;
   position: absolute;
   margin-right: 20px;
@@ -31,7 +31,7 @@ main {
   transition: opacity 600ms ease-in-out;
 }
 
-#div-mensagem-erro p {
+#div-mensagem p {
   margin-top: 2vh;
   font-size: 1.1rem;
   color: #fafafa;
@@ -39,7 +39,7 @@ main {
 }
 
 #nav-produtos-dropdown.fade,
-#div-mensagem-erro.fade {
+#div-mensagem.fade {
   opacity: 1;
 }
 
@@ -266,8 +266,8 @@ hr {
 
 #listagem-prods img {
   padding: 20px;
-  width: 575px;
-  height: 450px;
+  width: 670px;
+  height: 435px;
 }
 
 #listagem-prods h3 {

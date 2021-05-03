@@ -3,7 +3,7 @@ class HomeController
 {
     public function index()
     {
-        //pegando conteudo home da view
+        //carregando a view home
         $content = file_get_contents('./view/home.html');
         echo $content;
     }

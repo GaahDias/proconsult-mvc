@@ -14,6 +14,7 @@ class Core
 
                 $controller = 'ProductController';
 
+                //alterando entre as list, register, update, e delete
                 switch ($url['action']) {
                     case 'list':
                         $action = 'list';
